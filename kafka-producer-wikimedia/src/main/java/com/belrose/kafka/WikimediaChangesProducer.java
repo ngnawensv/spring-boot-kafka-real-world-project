@@ -27,6 +27,7 @@ public class WikimediaChangesProducer {
 
         //To read real time data from wikimedia, we use event source
         EventHandler eventHandler = new wikimediaChangesHandler(kafkaTemplate,topic);
+        //Consume the endpoints to get the recent changes data from wikimedia: https://stream.wikimedia.org/v2/stream/recentchange
         String url =String.format("%s%s",kafkaConfigTopic.getWikimediaBaseUrl(),kafkaConfigTopic.getRecentChangeUri());
         EventSource.Builder builder = new EventSource.Builder(eventHandler, URI.create(url));
         EventSource eventSource = builder.build();

@@ -18,7 +18,7 @@ spring:
       name: wikimedia_recentchange
 
     datasource:
-      url: jdbc:mysql://localhost:3306/wikimedia?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+      url: jdbc:mysql://localhost:3306/springBootKafkaRealWorldProjectDb?createDatabaseIfNotExist=true&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
       username: root
       password: admin
 

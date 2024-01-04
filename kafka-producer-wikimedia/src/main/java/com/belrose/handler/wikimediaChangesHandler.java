@@ -27,6 +27,7 @@ public class wikimediaChangesHandler implements EventHandler {
 
     }
 
+    // This method will be trigger every time the new message appearing on wikimedia
     @Override
     public void onMessage(String s, MessageEvent messageEvent) throws Exception {
         log.info(String.format("wikimediaChangesHandler->onMessage: Event data => %s ", messageEvent.getData()));
